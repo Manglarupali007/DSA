@@ -2,13 +2,13 @@ class Solution {
     public char findTheDifference(String s, String t) {
      char[] a=s.toCharArray();
      char[] b=t.toCharArray();
-     int sum1=0, sum2=0;
-     for(int i=0;i<a.length;i++){
-        sum1+=a[i];
+     int sum=0;
+     for(int i=0;i<b.length;i++){
+        sum+=b[i];
      }
-     for(int j=0;j<b.length;j++){
-        sum2+=b[j];
+     for(int j=0;j<a.length;j++){
+        sum-=a[j];
      }
-        return (char)(sum2-sum1);
+        return (char)(sum);
     }
 }
