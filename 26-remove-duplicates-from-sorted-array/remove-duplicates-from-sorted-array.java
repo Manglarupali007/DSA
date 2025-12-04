@@ -8,8 +8,7 @@ class Solution {
                 if(nums[i]!=nums[j]){
                     i++;
                     nums[i]=nums[j]; // store the unique value 
-                }
-            
+                } 
         }
         return i+1;
     }
