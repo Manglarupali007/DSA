@@ -17,6 +17,7 @@ class Solution {
 
 
 
+
         int n=nums.length;
         int candidate=0;
         int count=0;
@@ -32,5 +33,9 @@ class Solution {
             }
         }
         return candidate;
+
+
+
+
     }
 }
