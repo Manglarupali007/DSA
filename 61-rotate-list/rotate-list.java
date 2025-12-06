@@ -29,10 +29,9 @@ class Solution {
 
         int steps = n - k;
         ListNode newTail = head;
-        while (steps-- > 1) {
+       for (int i = 1; i < steps; i++) {
             newTail = newTail.next;
         }
-
         ListNode newHead = newTail.next;
         newTail.next = null; 
 
