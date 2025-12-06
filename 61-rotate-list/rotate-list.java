@@ -22,14 +22,15 @@ class Solution {
             n++;
         }
 
- tail.next = head; 
-
         k = k % n;
-       
+        if (k == 0) return head;
+
+        tail.next = head; // make circle
+
         int steps = n - k;
         ListNode newTail = head;
-        for(int i=1;i<steps;i++){
-newTail=newTail.next;
+        while (steps-- > 1) {
+            newTail = newTail.next;
         }
 
         ListNode newHead = newTail.next;
