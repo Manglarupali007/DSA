@@ -8,7 +8,6 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
         while (head != null && head.val == val) {
