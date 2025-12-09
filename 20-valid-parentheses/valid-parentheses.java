@@ -14,14 +14,13 @@ class Solution {
                 return false;
             }
 
-             if(c==']' && top != '['){
+             else if(c==']' && top != '['){
                 return false;
             }
 
- if(c=='}' && top != '{'){
+else if(c=='}' && top != '{'){
                 return false;
             }
-
 
         }
       }  
