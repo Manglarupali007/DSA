@@ -1,14 +1,14 @@
 class Solution {
     public int missingNumber(int[] nums) {
         int n=nums.length;
-        int sum1=0;
+        int a_sum=0;
         for(int i=0;i<=n;i++){
-sum1+=i;
+            a_sum+=i;
         }
-        int sum2=0;
+        int b_sum=0;
         for(int i=0;i<n;i++){
-            sum2+=nums[i];
+            b_sum+=nums[i];
         }
-        return sum1-sum2;
+return a_sum-b_sum;
     }
 }
