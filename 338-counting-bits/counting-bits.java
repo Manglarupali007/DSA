@@ -1,13 +1,13 @@
 class Solution {
     public int[] countBits(int n) {
-       int ans[]=new int[n+1];
-       for(int i=0;i<=n;i++){
-        ans[i]=countsets(i);
-       }
-       return ans;
+        int ans[]=new int[n+1];
+        for(int i=0;i<=n;i++){
+            ans[i]=number(i);
+        }
+        return ans;
     }
-    public int countsets(int n){
-         int count=0;
+    public int number(int n){
+        int count=0;
         while(n>0){
             count+=n&1;
             n>>=1;
