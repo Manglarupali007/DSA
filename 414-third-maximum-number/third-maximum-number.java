@@ -1,23 +1,24 @@
 class Solution {
     public int thirdMax(int[] nums) {
-        long max = Long.MIN_VALUE;
-        long smax = Long.MIN_VALUE;
-        long tmax = Long.MIN_VALUE;
-        for (int n : nums) {
-            if (n > max) {
-                max = n;
+        int n=nums.length;
+        long max=Long.MIN_VALUE;
+         long smax=Long.MIN_VALUE;
+          long tmax=Long.MIN_VALUE;
+          for(int val:nums){
+            if(val>max){
+                max=val;
             }
-        }
-        for (int n : nums) {
-            if (n > smax && n < max) {
-                smax = n;
+          }
+          for(int val:nums){
+            if(val>smax && val!=max){
+                smax=val;
             }
-        }
-        for (int n : nums) {
-            if (n > tmax && n < smax) {
-                tmax = n;
+          }
+          for(int val:nums){
+            if(val>tmax && (val!=max && val!=smax)){
+tmax=val;
             }
-        }
-        return (tmax == Long.MIN_VALUE) ? (int) max : (int) tmax;
+          }
+              return (tmax == Long.MIN_VALUE) ? (int) max : (int) tmax;
     }
 }
