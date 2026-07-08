@@ -5,11 +5,9 @@ class Solution {
             if (nums[i] == 0){
             continue; 
             }
-            
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;
-
             j++;
         }
     }
