@@ -1,37 +1,36 @@
 class Solution {
-    int canMake(int [] day, int mid, int k){
-        int bouq_count=0;
-        int cons_count=0;
-        int n=day.length;
-        for(int i=0;i<n;i++){
-            if(day[i]<=mid) cons_count++;
-            else cons_count=0;
-            if(cons_count==k){
-                bouq_count++;
-                cons_count=0;
-            }
-        }
-        return bouq_count;
-    }
     public int minDays(int[] bloomDay, int m, int k) {
+        int low = Integer.MAX_VALUE;
+        int high = Integer.MIN_VALUE;
         int n=bloomDay.length;
-        int max=-1;
-        for(int i=0;i<n;i++){
-            max=Math.max(max,bloomDay[i]);
+        if ((long)m * k > n)
+    return -1;
+        for (int i=0;i<n;i++) {
+            low = Math.min(low, bloomDay[i]);
+            high = Math.max(high, bloomDay[i]);
         }
-        int low=0;
-        int high=max;
-        int min=-1;
-        while(low<=high){
-            int mid=(high+low)/2;
-            if(canMake(bloomDay,mid,k)>=m){
-                min=mid;
-                high=mid-1;
+        while (low <= high) {
+            int mid = (high+low)/2;
+            int bouquet = 0;
+            int count = 0;
+            for (int day : bloomDay) {
+                if (day <= mid) {
+                    count++;
+                    if (count == k) {
+                        bouquet++;
+                        count = 0;
+                    }
+                } else {
+                    count = 0;
+                }
             }
-            else{
-                low=mid+1;
+            if (bouquet >= m) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
             }
+
         }
-         return min;
+        return low;
     }
 }
