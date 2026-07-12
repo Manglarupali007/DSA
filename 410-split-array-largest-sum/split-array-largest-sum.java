@@ -27,6 +27,6 @@ class Solution {
                 low=mid+1;
             }
         }
-        return (int)low;
+        return (int) low;
     }
 }
