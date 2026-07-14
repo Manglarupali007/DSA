@@ -33,7 +33,9 @@ class Solution {
         int l=lower(nums, target);
         int n=nums.length;
         int u=upper(nums,target)-1;
-        if(l==n || nums[l]!=target) return new int [] {-1, -1};
+        if(l==n || nums[l]!=target){
+             return new int [] {-1, -1};
+        }
         return new int[]{l, u};
     }
 }
