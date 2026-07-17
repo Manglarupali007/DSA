@@ -5,9 +5,9 @@ class Solution {
         for(char ch:s.toCharArray()){
             freq[ch]++;
         }
-        char[] ch=new char[n];
-        int ind=0;
-        while(ind<n){
+        char ch[]=new char[n];
+        int idx=0;
+        while(idx<n){
             int maxfreq=0;
             char maxchar=0;
             for(int i=0;i<128;i++){
@@ -17,7 +17,7 @@ class Solution {
                 }
             }
             while(maxfreq-->0){
-                ch[ind++]=maxchar;
+                ch[idx++]=maxchar;
             }
             freq[maxchar]=0;
         }
