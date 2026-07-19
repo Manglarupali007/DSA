@@ -3,9 +3,6 @@ class Solution {
         int n = s.length();
         int ans = 0;
         int i=0,j=0;
-        // if(n==0){
-        //     return 0;
-        // }
         HashSet<Character> set = new HashSet<>();
         while(j<n){
             char ch = s.charAt(j);
