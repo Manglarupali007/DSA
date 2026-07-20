@@ -3,8 +3,7 @@ class Solution {
         int low = Integer.MAX_VALUE;
         int high = Integer.MIN_VALUE;
         int n=bloomDay.length;
-        if ((long)m * k > n)
-    return -1;
+        if ((long)m * k > n) return -1;
         for (int i=0;i<n;i++) {
             low = Math.min(low, bloomDay[i]);
             high = Math.max(high, bloomDay[i]);
@@ -29,7 +28,6 @@ class Solution {
             } else {
                 low = mid + 1;
             }
-
         }
         return low;
     }
