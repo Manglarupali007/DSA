@@ -4,9 +4,9 @@ class Solution {
         StringBuilder ans = new StringBuilder();
         int n=arr.length;
         for(int i=n-1;i>=0;i--){
-            ans.append(arr[i]);
-            if(i!=0) ans.append(" ");
+            ans.append(arr[i]+" ");
+            // if(i!=0) ans.append(" ");
         }
-        return ans.toString();
+        return ans.toString().trim();
     }
 }
