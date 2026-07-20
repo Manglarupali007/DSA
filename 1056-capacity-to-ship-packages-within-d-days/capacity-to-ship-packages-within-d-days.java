@@ -12,11 +12,11 @@ class Solution {
             int day=1;
             int sum=0;
             for(int i=0;i<n;i++){
-                if(sum+weights[i]>mid){
+               sum += weights[i];
+                if(sum > mid){
                     day++;
-                    sum=0;
+                    sum = weights[i];
                 }
-                sum+=weights[i];
             }
             if(day>days) low=mid+1;
             else high=mid-1;
