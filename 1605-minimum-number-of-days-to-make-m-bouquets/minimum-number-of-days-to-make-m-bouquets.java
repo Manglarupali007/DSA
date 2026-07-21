@@ -20,7 +20,9 @@ class Solution {
                         count=0;
                     }
                 }
-                else count=0;
+                else{
+                    count=0;
+                }
             }
             if(bou>=m) high=mid-1;
             else low=mid+1;
