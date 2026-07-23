@@ -7,10 +7,10 @@ class Solution {
         int len=n+m;
         for(int k=0;k<=len/2;k++){
             prev=curr;
-            if(i<n && (j>=m || (nums1[i]<=nums2[j]))){
+            if(i<n && (j>=m || nums1[i]<=nums2[j])){
                 curr=nums1[i++];
             }
-            else {
+            else{
                 curr=nums2[j++];
             }
         }
