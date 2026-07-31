@@ -1,15 +1,20 @@
 class Solution {
-    public boolean isHappy(int n) {
-        HashSet <Integer> hash=new HashSet<>();
-        while(n!=1 && hash.add(n)){
-            int sum=0;
-            while(n>0){
-                int r=n%10;
-                sum+=r*r;
-                n/=10;
-            }
-            n=sum;
+    public int get(int n){
+        int dig=0;
+        while(n>0){
+int rem=n%10;
+dig+=rem*rem;
+n/=10;
         }
-        return n==1;
+        return dig;
+    }
+    public boolean isHappy(int n) {
+        int slow=n;
+        int fast=get(n);
+        while(fast!=1 && fast!=slow){
+            slow=get(slow);
+            fast=get(get(fast));
+        }
+        return fast==1;
     }
 }
