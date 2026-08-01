@@ -5,9 +5,7 @@ class Solution {
         if(n%2!=0) return false;
         for(int i=0;i<n;i++){
             char c=s.charAt(i);
-            if(c=='[' || c=='(' || c=='{'){
-                st.push(c);
-            }
+            if(c=='[' || c=='(' || c=='{')   st.push(c);
             else {
                 if(st.isEmpty()) return false;
                 char top=st.pop();
