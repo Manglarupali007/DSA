@@ -19,7 +19,7 @@ class Solution {
         int i=0;
         int j=list.size()-1;
         while(i<j){
-        while(!list.get(i).equals(list.get(j))){
+        if(!list.get(i).equals(list.get(j))){
             return false;
         }
         i++;
