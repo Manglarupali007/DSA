@@ -9,6 +9,7 @@ class Solution {
             }
             else{
                 count--;
+                
                 if(count>0) ans.append(ch);
             }
         }
