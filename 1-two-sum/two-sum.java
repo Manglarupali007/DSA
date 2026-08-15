@@ -4,11 +4,9 @@ class Solution {
         HashMap<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<n;i++){
             int reqd=target-nums[i];
-            if(map.containsKey(reqd)){
-                return new int[]{map.get(reqd),i};
-            }
+            if(map.containsKey(reqd)) return new int[]{map.get(reqd),i};
             map.put(nums[i],i);
         }
-        return new int[]{-1,-1};
+        return new int []{-1,-1};
     }
 }
