@@ -7,8 +7,8 @@ class Solution {
             if(map.containsKey(reqd)){
                 return new int[]{map.get(reqd),i};
             }
-            else map.put(nums[i],i);
+            map.put(nums[i],i);
         }
-        return new int []{-1,-1};
+        return new int[]{-1,-1};
     }
 }
