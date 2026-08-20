@@ -3,14 +3,12 @@ class Solution {
         int n=s.length();
         if(n%2!=0) return false;
         Stack<Character> st=new Stack<>();
-        for(int i=0;i<n;i++){
-            if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i)=='['){
-                st.push(s.charAt(i));
-            }
-            else {
+        for(char c:s.toCharArray()){
+            if(c=='(' || c=='[' || c=='{') st.push(c);
+            else{
                 if(st.isEmpty()) return false;
                 char top=st.pop();
-                if((top=='(' && s.charAt(i)!=')') || (top=='[' && s.charAt(i)!=']') || (top=='{' && s.charAt(i)!='}')) return false;
+                if((top=='(' && c!=')') || (top=='[' && c!=']') || (top=='{' && c!='}')) return false;
             }
         }
         return st.isEmpty();
