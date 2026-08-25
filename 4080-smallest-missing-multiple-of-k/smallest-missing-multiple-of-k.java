@@ -10,7 +10,7 @@ class Solution {
             if(set.contains(pro))continue;
             else return pro;
         }
-        if(n==1) return k*2;
+        // if(n==1) return k*2;
         return-1;
     }
 }
