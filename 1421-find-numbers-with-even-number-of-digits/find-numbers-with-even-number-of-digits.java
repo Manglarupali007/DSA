@@ -1,17 +1,18 @@
 class Solution {
+    public int count(int n){
+        int cnt=0;
+        while(n>0){
+            cnt++;
+            n/=10;
+        }
+        return cnt;
+    }
     public int findNumbers(int[] nums) {
-        int total_num=0;
-        for (int i=0;i<nums.length;i++){
-              int count=0;
-            int num=nums[i];
-            while(num>0){
-                num/=10;
-                count++;
-            }
-        if(count%2==0){
-total_num++;
+        int n=nums.length;
+        int ans=0;
+        for(int i=0;i<n;i++){
+            if(count(nums[i]) % 2 == 0 ) ans++;
         }
-        }
-        return total_num;
-   }
+        return ans;
+    }
 }
