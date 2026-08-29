@@ -4,17 +4,17 @@ class Solution {
         int n=height.length;
         int right=n-1;
         int water=0;
-        int lmax=0, rmax=0;
+        int lmax=height[left], rmax=height[right];
         while(left<right){
-            if(height[left]<height[right]){
-                if(lmax<height[left]) lmax=height[left];
-            else water+=lmax-height[left];
-            left++;
+            if(lmax<rmax){
+                left++;
+               lmax=Math.max(lmax,height[left]);
+                water+=lmax-height[left];
             }
             else{
-                if(rmax<height[right]) rmax=height[right];
-                else water+=rmax-height[right];
                 right--;
+                rmax=Math.max(rmax,height[right]);
+                water+=rmax-height[right];
             }
         }
         return water;
