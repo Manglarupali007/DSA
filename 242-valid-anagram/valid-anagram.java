@@ -3,8 +3,8 @@ class Solution {
         int n=s.length();
         int m=t.length();
         if(n!=m) return false;
-        char srr[]=s.toCharArray();
-        char trr[]=t.toCharArray();
+        char [] srr=s.toCharArray();
+        char [] trr=t.toCharArray();
         Arrays.sort(srr);
         Arrays.sort(trr);
         return Arrays.equals(srr,trr);
